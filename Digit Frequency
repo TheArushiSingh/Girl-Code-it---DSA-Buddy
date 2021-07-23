@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+ using namespace std;
+ 
+ int Fre(int n , int d){
+    int k, l=0; 
+     while(n>0){
+         
+         k=n%10;
+         n=n/10;
+        if(k==d){
+            l++;
+        }
+     }
+     return l;
+ }
+ int main(){
+     int num, dig;
+     cin>>num>>dig;
+     int result= Fre(num,dig);
+     cout<<result;
+ }
