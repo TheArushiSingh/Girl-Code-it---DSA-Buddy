@@ -1,0 +1,38 @@
+1. You are given a number n, representing the count of elements.
+2. You are given n numbers.
+3. You are required to find the span of input. Span is defined as difference of maximum value and minimum value.
+
+SOLUTION
+steps-
+for max : let arr[0] = max
+compare with rest elements
+if any element is found whivh is greater than arr[0] update max to that element
+samne with minimum 
+
+
+code- 
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+   int n,span;
+   cin>>n;
+   int arr[n];
+   for(int i=0;i<n;i++){
+       cin>>arr[i];
+   }
+   
+   int max=INT_MIN;
+   int min=INT_MAX;
+   
+   for(int i=0;i<n;i++){
+       if(arr[i]>max)
+       max=arr[i];
+       
+       if(arr[i]<min)
+       min=arr[i];
+   }
+   span = max-min;
+   cout<<span<<endl;
+}
